@@ -5,7 +5,19 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World", "status": "ok"}
+    return {
+  "version": "2.0",
+  "template": {
+    ...
+  },
+  "context": {
+    ...
+  },
+  "data": {
+    ...
+  }
+}
+
 
 if __name__ == "__main__":
     import uvicorn
